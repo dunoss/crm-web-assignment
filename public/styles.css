@@ -50,3 +50,27 @@ footer {
   font-size: 15px;
   margin-top: 30px;
 }
+
+
+.contacts h1 {
+  background-color: salmon;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+}
+.contacts .paul {
+  background-color: turquoise;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  font-size: 25px;
+line-height: 40px;
+text-align: left;
+}
+.contacts .links:visited {
+  color: blue;
+}
+.contacts .links {
+  font-size: 20px;
+  line-height: 40px;
+}

@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <style>
-    h1 {background-color: salmon; width: 90%;margin: auto;
-      margin-top: 10px;}
-    .paul {background-color: turquoise;width: 90%;
-      margin: auto; margin-top: 10px;font-size: 25px;
-    line-height: 40px; text-align: left;}
-    .links:visited {color: blue;}
-    .links {font-size: 20px; line-height: 40px;}
-    </style>
-  </head>
-  <body>
+<main class="contacts">
 
     <h1>There are <%= Contact.total %> contacts</h1>
 
     <ul>
     <% Contact.all.each do |contact| %>
       <li class="paul"><%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)<br />
-          <a class="links" href="#">delete</a> |
+          <a class="links" href="/contacts/<%= contact.id %>/delete">delete</a> |
           <a class="links" href="#">edit</a>
         </li>
     <% end %>
     </ul>
 
-  </body>
-</html>
+</main>
