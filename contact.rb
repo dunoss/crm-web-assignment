@@ -37,6 +37,9 @@ class Contact
     @@contacts
   end
 
+  def self.total
+    @@contacts.size
+  end
   # This method should accept an id as an argument
   # and return the contact who has that id
   def self.find(search_id)

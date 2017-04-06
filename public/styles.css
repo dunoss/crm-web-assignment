@@ -1,0 +1,52 @@
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-size: 20px;*/
+  line-height: 1.5;
+  font-weight: 900;
+  text-align: center;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+header {
+  background-color: black;
+  font-size: 50px;
+  color: white;
+  width: 100%;
+  overflow: hidden;
+}
+
+nav {
+  background-color: lightgrey;
+  color: white;
+  width: 100%;
+  font-size: 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  font-size: 15px;
+  margin-top: 30px;
+}
