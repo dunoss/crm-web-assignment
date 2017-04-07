@@ -5,13 +5,9 @@ require_relative 'contact'
 require 'sinatra'
 require 'pry'
 
-# Fake data
-# Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
-# Contact.create('Sergey', 'Brin', 'sergey@google.com', 'Co-Founder')
-# Contact.create('Steve', 'Jobs', 'steve@apple.com', 'Visionary')
-
 get '/' do
   @crm_app_name = "PAUL CRM"
+  # @contacts = Contact.all
   erb :index
 end
 
@@ -33,6 +29,11 @@ get '/contacts/:id/delete' do
   contact = Contact.find(contact_id.to_i)
   contact.delete
   redirect to('/contacts')
+end
+
+get '/contacts/1' do
+  @contact = Contact.find(1)
+  erb :show_contact
 end
 
 Contact.create("Paul", "Lam", "paullamx@gmail.com","Loves biking")

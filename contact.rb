@@ -42,12 +42,17 @@ class Contact
   end
   # This method should accept an id as an argument
   # and return the contact who has that id
-  def self.find(search_id)
-    results = @@contacts.select do |account|
-      account.id == search_id
+  # def self.find(search_id)
+  #   results = @@contacts.select do |account|
+  #     account.id == search_id
+  #   end
+  #   results[0]
+  # end
+
+    def self.find(id)
+      @@contacts.find { |contact| contact.id == id }
     end
-    results[0]
-  end
+  
 
 # breakout example
   # def self.find(id)
