@@ -64,10 +64,14 @@ put '/contacts/:id' do
   end
 end
 
+after do
+  ActiveRecord::Base.connection.close
+end
 
-Contact.create("Paul", "Lam", "paullamx@gmail.com","Loves biking")
-Contact.create("Harpreet", "Sehmbi", "harpreet@gmail.com","Comedian")
-Contact.create("Kevin", "Liu", "liuke@gmail.com","Vita Mixer")
-Contact.create("Evan", "Tran", "tanni@gmail.com","press 1")
-Contact.create("Maple", "Lam", "maple@gmail.com","Casino Kween")
-Contact.create("Henry", "Lam", "henry@gmail.com","Ping Pong King")
+
+# Contact.create("Paul", "Lam", "paullamx@gmail.com","Loves biking")
+# Contact.create("Harpreet", "Sehmbi", "harpreet@gmail.com","Comedian")
+# Contact.create("Kevin", "Liu", "liuke@gmail.com","Vita Mixer")
+# Contact.create("Evan", "Tran", "tanni@gmail.com","press 1")
+# Contact.create("Maple", "Lam", "maple@gmail.com","Casino Kween")
+# Contact.create("Henry", "Lam", "henry@gmail.com","Ping Pong King")
