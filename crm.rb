@@ -40,6 +40,15 @@ get '/contacts/:id' do
   end
 end
 
+get '/contacts/:id/edit' do
+  @contact = Contact.find(params[:id].to_i)
+  if @contact
+    erb :edit_contact
+  else
+    raise Sinatra::NotFound
+  end
+end
+
 Contact.create("Paul", "Lam", "paullamx@gmail.com","Loves biking")
 Contact.create("Harpreet", "Sehmbi", "harpreet@gmail.com","Comedian")
 Contact.create("Kevin", "Liu", "liuke@gmail.com","Vita Mixer")

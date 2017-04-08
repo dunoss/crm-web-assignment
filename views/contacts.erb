@@ -8,7 +8,7 @@
       <a href="/contacts/<%= contact.id %>">
       <%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)<br />
       </a>
-          <a class="links" href="#">edit</a> |
+          <a class="links" href="/contacts/<%= contact.id %>/edit">edit</a> |
           <a class="links" href="/contacts/<%= contact.id %>/delete">delete</a>
 
         </li>
