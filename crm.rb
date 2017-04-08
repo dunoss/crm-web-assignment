@@ -31,6 +31,7 @@ get '/contacts/:id/delete' do
   redirect to('/contacts')
 end
 
+
 get '/contacts/:id' do
   @contact = Contact.find(params[:id].to_i)
   if @contact
